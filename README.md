@@ -1,98 +1,49 @@
-devenv/
-├── .github/                          # GitHub 配置
-│   ├── workflows/                    # CI/CD 流水线
-│   ├── ISSUE_TEMPLATE/              # Issue 模板
-│   └── PULL_REQUEST_TEMPLATE.md     # PR 模板
-│
-├── .vscode/                         # VSCode 配置
-│   ├── settings.json
-│   ├── extensions.json
-│   └── launch.json
-│
-├── bin/                             # 可执行脚本
-│   ├── devenv                       # 主命令
-│   ├── devenv-completion.bash       # Bash 补全
-│   ├── devenv-completion.zsh        # Zsh 补全
-│   └── devenv-completion.fish       # Fish 补全
-│
-├── config/                          # 配置文件
-│   ├── templates/                   # 配置模板
-│   ├── defaults/                    # 默认配置
-│   └── profiles/                    # 环境配置文件
-│
-├── docs/                            # 文档
-│   ├── README.md
-│   ├── INSTALL.md
-│   ├── CONFIGURATION.md
-│   ├── USAGE.md
-│   ├── DEVELOPMENT.md
-│   ├── CONTRIBUTING.md
-│   ├── CHANGELOG.md
-│   └── API.md
-│
-├── src/                             # 源代码
-│   ├── core/                        # 核心模块
-│   │   ├── logger.sh
-│   │   ├── utils.sh
-│   │   ├── config.sh
-│   │   ├── validator.sh
-│   │   └── installer.sh
-│   │
-│   ├── modules/                     # 功能模块
-│   │   ├── git/
-│   │   ├── maven/
-│   │   ├── conda/
-│   │   ├── docker/
-│   │   ├── middleware/
-│   │   └── monitoring/
-│   │
-│   ├── platforms/                   # 平台支持
-│   │   ├── macos.sh
-│   │   ├── linux.sh
-│   │   ├── windows.sh
-│   │   └── wsl.sh
-│   │
-│   └── commands/                    # 命令模块
-│       ├── init.sh
-│       ├── install.sh
-│       ├── update.sh
-│       ├── config.sh
-│       └── doctor.sh
-│
-├── tests/                           # 测试
-│   ├── unit/
-│   ├── integration/
-│   └── e2e/
-│
-├── examples/                        # 示例
-│   ├── docker-compose/
-│   ├── maven-projects/
-│   ├── conda-environments/
-│   └── git-configs/
-│
-├── scripts/                         # 工具脚本
-│   ├── bootstrap.sh
-│   ├── release.sh
-│   └── benchmark.sh
-│
-├── data/                            # 数据文件（运行时生成）
-│   ├── cache/
-│   ├── logs/
-│   └── state/
-│
-├── .gitignore
-├── .editorconfig
-├── .pre-commit-config.yaml
-├── .travis.yml                      # CI 配置
-├── Makefile
-├── Dockerfile
-├── docker-compose.yml
-├── pyproject.toml                   # Python 项目配置
-├── Cargo.toml                       # Rust 项目配置
-├── package.json                     # Node.js 项目配置
-├── requirements.txt                 # Python 依赖
-├── go.mod                           # Go 模块配置
-├── pom.xml                          # Maven 配置
-├── setup.py                         # Python 安装脚本
-├── LICENSE
-└── README.md
+# DevEnv - 跨平台开发环境一键部署系统
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/devenv/devenv)](https://github.com/devenv/devenv/releases)
+[![Build Status](https://github.com/devenv/devenv/workflows/CI/badge.svg)](https://github.com/devenv/devenv/actions)
+
+> 🚀 快速部署和管理您的开发环境
+
+## ✨ 特性
+
+- **跨平台支持**: macOS, Linux, Windows (WSL2)
+- **模块化设计**: 按需安装组件
+- **一键部署**: 自动化安装和配置
+- **可定制配置**: 支持配置文件和环境方案
+- **健康检查**: 系统诊断和问题修复
+- **服务管理**: 启动/停止/监控开发服务
+- **备份恢复**: 数据备份和恢复功能
+
+## 📦 支持组件
+
+### 开发工具
+- **版本控制**: Git, GitHub CLI
+- **构建工具**: Maven, Gradle
+- **包管理器**: npm, pip, cargo, go mod
+- **容器化**: Docker, Docker Compose
+
+### 编程语言
+- **Java**: OpenJDK, Maven, Gradle
+- **Python**: Conda, pip, virtualenv
+- **Node.js**: nvm, npm, yarn, pnpm
+- **Go**: Go, GOPATH, Go modules
+- **Rust**: Rust, Cargo
+
+### 中间件
+- **数据库**: MySQL, Redis, MongoDB
+- **消息队列**: Kafka
+- **服务发现**: Consul
+- **搜索引擎**: Elasticsearch
+
+### 监控日志
+- **监控**: Prometheus, Grafana
+- **日志**: ELK Stack (Elasticsearch, Logstash, Kibana)
+- **追踪**: Jaeger, Zipkin
+
+## 🚀 快速开始
+
+### 安装 DevEnv
+
+#### macOS / Linux
